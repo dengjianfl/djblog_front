@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import BaseSide from "./components/BaseSide.vue";
+import BaseSide from './components/BaseSide.vue';
 export default {
-    name: "App",
-    data() {
+    name: 'App',
+    data () {
         return {};
     },
     components: {
@@ -19,8 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url(/assets/scss/reset.scss);
-#app {
-  padding: 0 100px;
-}
+@import url(./assets/scss/reset.scss);
+@import url(./assets/scss/iconfont.css);
+@import url(./assets/scss/global.scss);
+
 </style>
