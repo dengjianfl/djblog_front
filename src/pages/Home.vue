@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <div class="home-item" v-for="item in articles">
+        <div class="home-item" v-for="(item, index) in articles" :key="index">
             <h1>
                 <span>{{item.title}}</span>
                 <span class="author">{{item.updateTime}}  Author : {{item.author}}</span>
@@ -9,7 +9,7 @@
             <div class="item-label">
                 <i class="iconfont icon-label"></i>
                 <b>:</b>
-                <span v-for="tag in item.tag">{{tag}}</span>
+                <span v-for="(tag, index) in item.tag" :key="index">{{tag}}</span>
             </div>
         </div>
     </div>
@@ -23,18 +23,18 @@ export default {
         };
     },
     mounted () {
-        this.$ajax({
-            url: `${process.env.API_MYBLOG_PATH}/getAllBlog`
-        }).then(res => {
-            if (!res.isSuccess) {
-                return false
-            }
-            res.data.forEach(element => {
-                element.updateTime = moment(element.updateTime).format('YYYY-MM-DD HH:mm:ss');
-            });
-            this.articles = res.data;
-            console.log(this.articles)
-        })
+        // this.$ajax({
+        //     url: `${process.env.API_MYBLOG_PATH}/getAllBlog`
+        // }).then(res => {
+        //     if (!res.isSuccess) {
+        //         return false;
+        //     }
+        //     res.data.forEach(element => {
+        //         element.updateTime = moment(element.updateTime).format('YYYY-MM-DD HH:mm:ss');
+        //     });
+        //     this.articles = res.data;
+        //     console.log(this.articles);
+        // });
     }
 };
 </script>

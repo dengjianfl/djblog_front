@@ -8,7 +8,6 @@ Vue.use(ElementUI);
 Vue.use(ajax);
 Vue.config.productionTip = false;
 
-
 /* eslint-disable no-new */
 new Vue({
     el: '#app',

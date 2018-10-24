@@ -6,7 +6,7 @@
 <script>
 export default {
 
-}
+};
 </script>
 <style lang="scss">
 .classification-page{
@@ -19,5 +19,3 @@ export default {
     }
 }
 </style>
-
-
