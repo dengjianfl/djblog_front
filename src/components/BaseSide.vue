@@ -13,7 +13,7 @@
                     <span>首页</span>
                 </li>
             </router-link>
-            <router-link :to="{path: '/helloWorld'}" active-class="active" exact>
+            <router-link :to="{path: '/classification'}" active-class="active" exact>
                 <li class="nav-item">
                     <i class="iconfont icon-activity"></i>
                     <span>归类</span>

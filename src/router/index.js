@@ -12,14 +12,14 @@ export default new Router({
             component: () => import('@/pages/Home')
         },
         {
-            path: '/helloWorld',
-            name: 'helloWorld',
-            component: () => import('@/components/HelloWorld')
+            path: '/classification',
+            name: 'classification',
+            component: () => import('@/pages/Classification')
         },
         {
             path: '/tags',
             name: 'tags',
             component: () => import('@/pages/Tags')
-        },
+        }
     ]
 });
